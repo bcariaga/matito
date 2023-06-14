@@ -7,24 +7,10 @@ const translateDayDict: { [key: string]: string } = {
     minutes: "minutos",
     seconds: "segundos",
 }
-// const DatePart = ({ value, label, containerClasses = '' }: { value: number, label: string, containerClasses?: string }) => {
-//     return (
-//         <div className={`w-24 mx-1 p-2 bg-white text-yellow-500 ${containerClasses}`}>
-//             <div className={`flex flex-col items-center`}>
-//                 <div className="w-24 mx-1 p-2 bg-white text-yellow-500 rounded-lg">
-//                     <div className="font-mono leading-none" x-text={label}>{value}</div>
-//                     <div className="font-mono uppercase text-sm leading-none">{label}</div>
-//                 </div>
-//                 {/* <span className='text-xl sm:text-base'>{value}</span>
-//                 <span className='text-xl sm:text-base'>{label}</span> */}
-//             </div>
-//         </div>
-//     )
-// }
 
 const DatePart = ({ value, label, containerClasses = '' }: { value: number, label: string, containerClasses?: string }) => {
     return (
-        <div className={`mx-1 p-2 bg-black text-yellow-500 rounded-lg ${containerClasses}`}>
+        <div className={`mx-1 p-2 bg-sky-300 text-white rounded-lg ${containerClasses}`}>
             <div className="font-mono leading-none" x-text={label}>{value}</div>
             <div className="font-mono uppercase text-sm leading-none">{label}</div>
         </div>
