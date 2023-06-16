@@ -15,15 +15,15 @@ export default function Home() {
               ¡El cumple de Matito!
             </span>
           </div>
-          <div className="basis-1/4">
+          <div className="basis-1/4 aspect-square">
             <Video src='./hip_hop_dancing_matito.mp4' />
           </div>
-          <div className="basis-1/4  font-blossom">
-            <p className="text-6xl">
+          <div className="basis-1/4 font-blossom">
+            <span className="text-6xl">
               Faltan:
-            </p>
+            </span>
           </div>
-          <div className="basis-1/4 justify-center flex items-center justify-center mt-8">
+          <div className="basis-1/4 justify-center flex items-center justify-center mt-4">
             <CountDownDynamic />
           </div>
         </div>

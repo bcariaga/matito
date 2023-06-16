@@ -18,7 +18,7 @@ const Ballons = () => {
     const RFB = dynamicComponents.ReactFloatingBalloons;
 
     return (
-        <RFB msgText="Matito" popVolumeLevel={0.1} count={10} />
+        <RFB msgText="Matito" count={10} supportsTouch={supportsTouch} />
     )
 }
 

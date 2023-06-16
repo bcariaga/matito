@@ -9,21 +9,21 @@ import { colorMaps } from "./colorMaps";
 export type BallonsProps = {
     msgText?: string;
     colors?: Array<keyof typeof colorMaps>;
-    popVolumeLevel?: number;
+    // popVolumeLevel?: number;
     loop?: boolean;
     hangOnTop?: boolean;
     supportsTouch?: boolean;
     count?: number
 }
 
-export const Balloon = ({ msgText, colors = ["yellow", "blue", "purple", "green", "orange", "red"], popVolumeLevel = 0.5, loop, hangOnTop, supportsTouch = true }: BallonsProps) => {
+export const Balloon = ({ msgText, colors = ["yellow", "blue", "purple", "green", "orange", "red"], /*popVolumeLevel = 0.5*/ loop, hangOnTop, supportsTouch = true }: BallonsProps) => {
     const delay = random(0, 5);
     const hasMsg = random(0, 2);
     const duration = 10 + random(1, 5);
     const left = random(10, 70); // random init left value to fly
     const [show, setShow] = useState(true);
-    let audio = new Audio('https://soundbible.com/mp3/Balloon%20Popping-SoundBible.com-1247261379.mp3');
-    audio.volume = popVolumeLevel;
+    // let audio = new Audio('https://soundbible.com/mp3/Balloon%20Popping-SoundBible.com-1247261379.mp3');
+    // audio.volume = popVolumeLevel;
 
     const popBalloon = (e: React.MouseEvent<HTMLDivElement>) => {
         let t = e.currentTarget;
@@ -40,7 +40,7 @@ export const Balloon = ({ msgText, colors = ["yellow", "blue", "purple", "green"
                 shape: ['circle', 'polygon'],
             }
         });
-        audio.play();
+        // audio.play();
         burst.replay();
 
         t.style.visibility = 'hidden';
@@ -79,7 +79,7 @@ export const Balloon = ({ msgText, colors = ["yellow", "blue", "purple", "green"
     )
 }
 
-export const Balloons = ({ count, msgText, colors, popVolumeLevel, loop, hangOnTop }: BallonsProps) => {
+export const Balloons = ({ count, msgText, colors, loop, hangOnTop }: BallonsProps) => {
     const density = count;// concurrent balloon count
     const supportsTouch = 'ontouchstart' in window || !navigator.maxTouchPoints;
     return (
@@ -88,7 +88,7 @@ export const Balloons = ({ count, msgText, colors, popVolumeLevel, loop, hangOnT
                 new Array(density).fill(null).map((b, i) =>
                     <Balloon
                         key={`balloon-${i}`}
-                        {...{ msgText, colors, popVolumeLevel, loop, hangOnTop, supportsTouch }}
+                        {...{ msgText, colors, loop, hangOnTop, supportsTouch }}
                     />
                 )
             }
