@@ -6,7 +6,7 @@ const CountDownDynamic = dynamic(() => import('@/components/CountDown'), {
 })
 export default function Home() {
   return (
-    <main className="flex h-screen w-screen justify-center">
+    <main className="flex h-max w-screen justify-center">
       <Ballons />
       <div className='min-h-screen min-w-screen'>
         <div className='flex flex-col text-center'>
