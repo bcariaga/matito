@@ -11,7 +11,7 @@ export default function Home() {
       <div className='min-h-screen min-w-screen'>
         <div className='flex flex-col text-center'>
           <div className="basis-1/4 mt-8">
-            <span className="text-8xl  font-blossom">
+            <span className="text-8xl font-blossom">
               ¡El cumple de Matito!
             </span>
           </div>

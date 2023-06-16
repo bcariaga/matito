@@ -10,7 +10,7 @@ const translateDayDict: { [key: string]: string } = {
 
 const DatePart = ({ value, label, containerClasses = '' }: { value: number, label: string, containerClasses?: string }) => {
     return (
-        <div className={`mx-1 p-2 bg-sky-300 text-white rounded-lg ${containerClasses}`}>
+        <div className={`mx-1 p-2 bg-sky-100 text-black rounded-lg ${containerClasses}`}>
             <div className="font-mono leading-none" x-text={label}>{value}</div>
             <div className="font-mono uppercase text-sm leading-none">{label}</div>
         </div>
@@ -28,13 +28,6 @@ const CountDown = () => {
                 })
             }
         </div>
-        // <div className='flex flex-row gap-x-3'>
-        //     {
-        //         Object.keys(dateParts).map((key: string) => {
-        //             return <DatePart key={key} containerClasses='basis-1/4 w-20' label={translateDayDict[key]} value={dateParts[key as keyof DateSplitted]} />
-        //         })
-        //     }
-        // </div>
     )
 }
 export default CountDown;

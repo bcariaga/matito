@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 const dynamicComponents = {
     ReactFloatingBalloons: dynamic(
         () =>
-            import("react-floating-balloons").then(
-                (mod) => mod.ReactFloatingBalloons
+            import("./lib/Ballons").then(
+                (mod) => mod.Balloons
             ),
         { ssr: false }
     )
@@ -18,7 +18,7 @@ const Ballons = () => {
     const RFB = dynamicComponents.ReactFloatingBalloons;
 
     return (
-        <RFB msgText="Matito" popVolumeLevel={0.1} />
+        <RFB msgText="Matito" popVolumeLevel={0.1} count={10} />
     )
 }
 
